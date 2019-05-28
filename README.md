@@ -5,12 +5,25 @@ Linernote wilt alle informatie van verschillende website platformen van artieste
 
 ## Inhoud
 * [Logboek](#logboek)
-* [Api's](#api's)
+* [Api's](#api)
 * [Code Guidelines](#code-guidelines)
+
+## Linernote concept
+Zoals in de introductie al is beschreven Linernote wilt alle informatie van verschilende website platformen van bepaalde artiesten in 1 applicatie samenbrengen. Deze informatie word weergeven in een nieuwsfeedformaat zoals facebook. De gebruiker dient eerst de artiesten te volgen om deze in zijn/haar niewsfeed te zien. Gebruikers kunnen reageren en likes geven onder elke nieuwsfeed van de artiest. Deze reactie's en likes zijn binnen het platfrom Linernote.
+
+**Hoe werkt deze nieuwsfeed?**
+* Nieuwe feeds worden geladen door de lazy load manier(wanneer de gebruiker op het einde van de pagina bevind dan word er nieuwe feeds geladen)
+        * Deze feeds kunnen worden gesorteerd van `recent naar oud` en `willekeurig`
+
+### Opsomming van de functionaliteiten
+* Gebruikers kunnen artiesten volgen
+* Van de gevolgde artiesten worden de alle informatie weergeven in een nieuwsfeed
+        * Dit kan willekeurig of van recent naar oud
+* Gebruiker kan een nieuwsfeed van de artiest liken en een reactie plaatsen
 
 ## Logboek
 In het logboek kan je zien wat we en wanneer we iets gedaan hebben. [Klik hier om het logboek te bekijken](https://docs.google.com/document/d/1ecozMUHAtfIAY_AT3nCICShaaCL3TvpFQxL60df6N6w/edit?usp=sharing)
-## Api's
+## Api
 **Vereiste API's**
 *   Spotify
 *   Ticketmaster
