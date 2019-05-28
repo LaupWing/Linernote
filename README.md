@@ -5,7 +5,7 @@ Linernote wilt alle informatie van verschillende website platformen van artieste
 
 ## Inhoud
 * [Linernote Concept](#linernote-concept)
-   * [Opsomming van de functinoaliteiten](#opsomming-van-de-functinoaliteiten)
+   * [Opsomming van de functionaliteiten](#opsomming-van-de-functionaliteiten)
 * [Logboek](#logboek)
 * [Api's](#api)
 * [Code Guidelines](#code-guidelines)
