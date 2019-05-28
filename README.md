@@ -4,6 +4,10 @@ Linernote wilt alle informatie van verschillende website platformen van artieste
 **Project leden:** Loc Nguyen, Zekkie
 
 ## Inhoud
+* [Logboek](#logboek)
+* [Api's](#api's)
+* [Code Guidelines](#code-guidelines)
+
 ## Logboek
 In het logboek kan je zien wat we en wanneer we iets gedaan hebben. [Klik hier om het logboek te bekijken](https://docs.google.com/document/d/1ecozMUHAtfIAY_AT3nCICShaaCL3TvpFQxL60df6N6w/edit?usp=sharing)
 ## Api's
