@@ -40,7 +40,9 @@ In het logboek kan je zien wat we en wanneer we iets gedaan hebben. [Klik hier o
 *   Genuis
 *   Twitter
 <br>
+
 ![Api's](./images/README/apis.png)
+
 <br>
 Voor dit project moeten we meerdere api's gaan callen om het desbetreffende artiesten informatie te verkrijgen. Door op het op het linkje te klikken kan je onze onderzoek en meer informatie over de verschillende api's vinden.  
 
