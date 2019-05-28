@@ -5,7 +5,7 @@ Linernote wilt alle informatie van verschillende website platformen van artieste
 
 ## Inhoud
 * [Linernote Concept](#linernote-concept)
-        * [Opsomming van de functinoaliteiten](#opsomming-van-de-functinoaliteiten)
+   * [Opsomming van de functinoaliteiten](#opsomming-van-de-functinoaliteiten)
 * [Logboek](#logboek)
 * [Api's](#api)
 * [Code Guidelines](#code-guidelines)
@@ -39,8 +39,9 @@ In het logboek kan je zien wat we en wanneer we iets gedaan hebben. [Klik hier o
 *   BBC music
 *   Genuis
 *   Twitter
-
+<br>
 ![Api's](./images/README/apis.png)
+<br>
 Voor dit project moeten we meerdere api's gaan callen om het desbetreffende artiesten informatie te verkrijgen. Door op het op het linkje te klikken kan je onze onderzoek en meer informatie over de verschillende api's vinden.  
 
 [klik hier voor het onderzoek](https://docs.google.com/document/d/1qSwu_EqZyPMEuGU0jxgUnqHFw8AXY1QPlf9dYNw61aA/edit?usp=sharing)
