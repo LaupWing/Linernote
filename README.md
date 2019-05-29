@@ -60,6 +60,6 @@ Voor dit project moeten we meerdere api's gaan callen om het desbetreffende arti
     *   Functional programming (Dus geen object oriented syntaxes, zoals classes en basic objecten)
 
 ## Technologiën
-*   Pugg/React
+*   Pugg/React/Vue
 *   Firebase Firestore Database
 *   De verschillende API's
