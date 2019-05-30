@@ -1,0 +1,21 @@
+:root{
+    --main-bg-color: #171717;
+    --second-bg-color: #313131;
+    --main-font-color: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--main-bg-color);
+}
+
+nav{
+    height: 150px;
+    background: var(--second-bg-color);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
