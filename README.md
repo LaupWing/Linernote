@@ -44,7 +44,19 @@ In het logboek kan je zien wat we en wanneer we iets gedaan hebben zowel de plan
 ![Api's](./images/README/apis.png)
 
 <br>
-Voor dit project moeten we meerdere api's gaan callen om het desbetreffende artiesten informatie te verkrijgen. Door op het op het linkje te klikken kan je onze onderzoek en meer informatie over de verschillende api's vinden.  
+Voor dit project moeten we meerdere api's gaan callen om het desbetreffende artiesten informatie te verkrijgen. Door op het op het linkje te klikken kan je onze onderzoek en meer informatie over de verschillende api's vinden. Of bekijk de opsomming hieronder. 
+
+### Opsomming
+#### Spotify
+##### Data Behoeftes:
+* Soundtrack (link naar track)
+* Media Player
+* Artiesten Aanbevelingen (gerelateerde artiesten)
+##### Mogelijkheden
+1. Web Playback SDK (beta)
+        Hiermee kunnen we een mediaplayer maken, dat laat in de browser zien waar de gebruiker op het huidige moment naar aan het luiseren is. eventueel ook van nummer veranderen
+2. Spotify API  
+        Met de APi kunnen we de data van de gebruiker ophalen. Daarmee kunnen we weer gerelateerde artiesten weergeven gebaseerd op de artiesten waar de gebruiker naar luistered.
 
 [klik hier voor het onderzoek](https://docs.google.com/document/d/1qSwu_EqZyPMEuGU0jxgUnqHFw8AXY1QPlf9dYNw61aA/edit?usp=sharing)
 
