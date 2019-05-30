@@ -12,10 +12,21 @@
 }
 
 nav{
-    height: 150px;
+    padding: 40px;
     background: var(--second-bg-color);
     width: 100%;
     position: fixed;
     bottom: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
+nav svg{
+    width: 70px;
+    background: transparent;
+    height: 100%;
+}
+svg > path{
+    fill: white;
+    opacity: .5;
+}
