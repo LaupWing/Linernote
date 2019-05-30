@@ -24,7 +24,7 @@ Zoals in de introductie al is beschreven Linernote wilt alle informatie van vers
 * Gebruiker kan een nieuwsfeed van de artiest liken en een reactie plaatsen
 
 ## Logboek
-In het logboek kan je zien wat we en wanneer we iets gedaan hebben. [Klik hier om het logboek te bekijken](https://docs.google.com/document/d/1ecozMUHAtfIAY_AT3nCICShaaCL3TvpFQxL60df6N6w/edit?usp=sharing)
+In het logboek kan je zien wat we en wanneer we iets gedaan hebben zowel de planning/roadmap. [Klik hier om het logboek te bekijken](https://docs.google.com/document/d/1ecozMUHAtfIAY_AT3nCICShaaCL3TvpFQxL60df6N6w/edit?usp=sharing)
 ## Api
 **Vereiste API's**
 *   Instagram(wellicht niet mogelijk)
