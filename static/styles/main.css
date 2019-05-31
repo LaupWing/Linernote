@@ -25,8 +25,29 @@ nav svg{
     width: 70px;
     background: transparent;
     height: 100%;
+    opacity: .3;
+    transition: .25s;
 }
 svg > path{
     fill: white;
-    opacity: .5;
+}
+#container{
+    width: 100%;
+}
+#container input[type='text']{
+    padding: 20px;
+    padding-left: 40px;
+    width: 70%;
+    font-size: 30px;
+    border-radius: 40px;
+    border: none;
+    background: white;
+    margin: auto;
+    display: block;
+    margin-top: 50px;
+    outline: none;
+}
+/* States */
+.visible{
+    opacity: 1;
 }
