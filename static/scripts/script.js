@@ -1,6 +1,6 @@
-// const socket = io()
+const socket = io()
 
-
+socket.on('queryresult', result=>renderSearchResult(result))
 window.addEventListener('load', init)
     
 function init(){
@@ -21,33 +21,54 @@ function navClick(){
 
 // Rendering components
 function renderHome(){
-    clearContainer()
+    const container = document.querySelector('#container')
+    clearContainer(container)
     console.log('rendering home')
 }
 
 function renderSearch(){
-    clearContainer()
     const container = document.querySelector('#container')
+    clearContainer(container)
     const input = `
         <input id="search" type="text" placeholder="Search Artist Name">
     `
+    const results = `
+        <div id="results"></div>
+    `
     container.insertAdjacentHTML('beforeend', input)
+    container.insertAdjacentHTML('beforeend', results)
     container.querySelector('input#search').addEventListener('keyup', search)
 }
 
 function renderInfo(){
-    clearContainer()
+    const container = document.querySelector('#container')
+    clearContainer(container)
     console.log('rendering info')
 }
 
 function search(){
-    if(this.value === '') return
+    if(this.value === '') {
+        clearContainer(document.querySelector('#results'))
+        return
+    }
     socket.emit('artist query',  this.value)
 }
 
-function clearContainer(){
-    const container = document.querySelector('#container')
+function clearContainer(container){
     while(container.firstChild){
         container.removeChild(container.firstChild)
     }
+}
+function renderSearchResult(results){
+    const container = document.querySelector('#results')
+    clearContainer(container)
+    results.forEach(({name, images})=>{
+        const newEl = `
+        <div class="results-item">
+            <img src="${images[0].url}" alt="">
+            <p>${name}</p>
+        </div>
+        `
+        container.insertAdjacentHTML('beforeend', newEl)
+    })
 }

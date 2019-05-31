@@ -1,7 +1,7 @@
 const fetch = require('node-fetch')
 
-function getData({acces_token, endpoint}){
-    return fetch(`https://api.spotify.com/v1/${endpoint}`, 
+function getData({acces_token, url}){
+    return fetch(url, 
     {
         headers:
         {
@@ -9,7 +9,6 @@ function getData({acces_token, endpoint}){
         }
     })
         .then(response=> response.json())
-        .then(data=>console.log(data))
 }
 
 module.exports = {getData}
