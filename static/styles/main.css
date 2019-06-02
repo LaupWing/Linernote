@@ -8,9 +8,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--main-bg-color);
+    color: var(--main-font-color);
 }
 
+body{
+    width: 100%;
+    background: var(--main-bg-color);
+}
 nav{
     padding: 40px;
     background: var(--second-bg-color);
@@ -20,7 +24,9 @@ nav{
     display: flex;
     justify-content: space-around;
 }
-
+input{
+    color: black;
+}
 nav svg{
     width: 70px;
     background: transparent;
@@ -64,10 +70,35 @@ svg > path{
 }
 .results-item img{
     width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    clip-path: circle(50% at 50% 50%);
 }
 /* States */
 .visible{
     opacity: 1;
+}
+/* Detail Page */
+header{
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+}
+header img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+header .info{
+    height: 40%;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -75,12 +75,41 @@ function renderSearchResult(results){
         container.insertAdjacentHTML('beforeend', newEl)
     })
     document.querySelectorAll('.results-item').forEach(result=>{
+        result.removeEventListener('click', showDetail)
+    })
+    document.querySelectorAll('.results-item').forEach(result=>{
         result.addEventListener('click', showDetail)
     })
 }
 
-function renderDetails(data){
-    console.log(data)
+function renderDetails({details, related}){
+    const container = document.querySelector('#container')
+    clearContainer(container)
+    const header = `
+        <header>
+            <img src="${details.images[0].url}">
+            <div class="info">
+                <h2>${details.name}</h2>
+                <button>follow</button>
+            </div>
+        </header>
+        <aside>
+            <h3>Fans also like</h3>
+            <div id="related_artists">
+            </div>
+        </aside>
+    `
+    container.insertAdjacentHTML('beforeend', header)
+    const related_container = document.querySelector('#related_artists')
+    related.artists.forEach(artist=>{
+        const newEl = `
+            <div data-id="${artist.id}" class="artists">
+                <img src="${artist.images[0].url}">
+                <h4>${artist.name}</h4>
+            </div>
+        `
+        related_container.insertAdjacentHTML('beforeend', newEl)
+    })
 }
 
 function showDetail(){
