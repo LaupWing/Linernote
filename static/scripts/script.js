@@ -89,7 +89,9 @@ function renderDetails({details, related}){
         <header>
             <img src="${details.images[0].url}">
             <div class="info">
-                <h2>${details.name}</h2>
+                <div class="info-name">
+                    <h2>${details.name}</h2>
+                </div>
                 <button>follow</button>
             </div>
         </header>

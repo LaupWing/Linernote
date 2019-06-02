@@ -92,13 +92,50 @@ header img{
     z-index: 5;
 }
 header .info{
-    height: 40%;
+    height: 60%;
     position: absolute;
     z-index: 10;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+header .info .info-name{
+    font-size: 8vw;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    margin:10px auto;
+}
+header .info .info-name h2{
+    text-align: center;
+    width: 100%;
+}
+header .info button{
+    background: transparent;
+    border: white solid 5px;
+    font-size: 3vw;
+    padding: 8px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+/* Related */
+aside{
+    width: 100%;
+}
+aside #related_artists{
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+aside #related_artists .artists{
+    width: 400px;
+    margin: 20px;
+}
+aside #related_artists .artists img{
+    width: 100%;
 }
