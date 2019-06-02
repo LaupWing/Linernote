@@ -1,6 +1,7 @@
 const socket = io()
 
 socket.on('queryresult', result=>renderSearchResult(result))
+socket.on('detail data', details=>renderDetails(details))
 window.addEventListener('load', init)
     
 function init(){
@@ -51,6 +52,7 @@ function search(){
         clearContainer(document.querySelector('#results'))
         return
     }
+    console.log('searching')
     socket.emit('artist query',  this.value)
 }
 
@@ -63,13 +65,26 @@ function renderSearchResult(results){
     const container = document.querySelector('#results')
     clearContainer(container)
     console.log(results)
-    results.forEach(({name, images})=>{
+    results.forEach(({name, images, id})=>{
         const newEl = `
-        <div class="results-item">
+        <div data-id=${id} class="results-item">
             <img src="${images[0].url}" alt="">
             <p>${name}</p>
         </div>
         `
         container.insertAdjacentHTML('beforeend', newEl)
     })
+    document.querySelectorAll('.results-item').forEach(result=>{
+        result.addEventListener('click', showDetail)
+    })
+}
+
+function renderDetails(data){
+    console.log(data)
+}
+
+function showDetail(){
+    const id = this.getAttribute('data-id')
+    console.log(id)
+    socket.emit('get details', id)
 }

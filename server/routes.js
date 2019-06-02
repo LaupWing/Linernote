@@ -21,9 +21,30 @@ router.get('/home', (req,res)=>{
         io.to(id).emit('queryresult', data)
     }
 
+    async function getDetail(searchId, socketId){
+        const config_details = {
+            url: `https://api.spotify.com/v1/artists/${searchId}`,
+            acces_token
+        }
+        const config_related = {
+            url: `https://api.spotify.com/v1/artists/${searchId}/related-artists`,
+            acces_token
+        }
+        const details = await getData(config_details)
+        const related = await getData(config_related)
+        const data    = {
+            details,
+            related
+        }
+        // const data = unfiltered_data.artists.items
+        //     .filter(item=>item.images.length!==0)
+        io.to(socketId).emit('detail data', data)
+    }
+
     io.on('connection', (socket)=>{
         socket.join(socket.id)
         socket.on('artist query',(val)=>artistQuery(val, socket.id))
+        socket.on('get details',(id)=>getDetail(id, socket.id))
     })
     res.render('index')
 })
