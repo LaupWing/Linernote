@@ -62,6 +62,7 @@ function clearContainer(container){
 function renderSearchResult(results){
     const container = document.querySelector('#results')
     clearContainer(container)
+    console.log(results)
     results.forEach(({name, images})=>{
         const newEl = `
         <div class="results-item">
