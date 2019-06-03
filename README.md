@@ -1,6 +1,5 @@
 # Linernote
 Linernote wilt alle informatie van verschillende website platformen van artiesten in 1 applicatie brengen. De weergave van deze informatie word gedaan in een nieuwsfeed formaat.
-Test
 **Project leden:** Loc Nguyen, Zekkie
 
 ## Inhoud
