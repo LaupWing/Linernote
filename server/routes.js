@@ -1,5 +1,6 @@
 const express   = require('express')
 const router    = express.Router()
+const {getDataWithToken} = require('./helper')
 const {getData} = require('./helper')
 
 router.get('/', (req,res)=>{
@@ -15,7 +16,7 @@ router.get('/home', (req,res)=>{
             url: `https://api.spotify.com/v1/search?q=${val}&type=artist&limit=5&offset=0`,
             acces_token
         }
-        const unfiltered_data = await getData(config)
+        const unfiltered_data = await getDataWithToken(config)
         const data = unfiltered_data.artists.items
             .filter(item=>item.images.length!==0)
         io.to(id).emit('queryresult', data)
@@ -30,11 +31,15 @@ router.get('/home', (req,res)=>{
             url: `https://api.spotify.com/v1/artists/${searchId}/related-artists`,
             acces_token
         }
-        const details = await getData(config_details)
-        const related = await getData(config_related)
+        const details       = await getDataWithToken(config_details)
+        const related       = await getDataWithToken(config_related)
+        const events_url    = `https://app.ticketmaster.com/discovery/v2/attractions.json?keyword=${filterOutChar(details.name)}&countryCode=NL&apikey=${process.env.TICKETMASTER_CONSUMER_KEY}`
+        const events        = await getData(events_url)
+        console.log(events_url)
         const data    = {
             details,
-            related
+            related,
+            events
         }
         // const data = unfiltered_data.artists.items
         //     .filter(item=>item.images.length!==0)
@@ -48,5 +53,10 @@ router.get('/home', (req,res)=>{
     })
     res.render('index')
 })
+
+function filterOutChar(string){
+    return string.trim()
+}
+
 
 module.exports = router

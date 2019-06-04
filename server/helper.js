@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 
-function getData({acces_token, url}){
+function getDataWithToken({acces_token, url}){
     return fetch(url, 
     {
         headers:
@@ -11,4 +11,10 @@ function getData({acces_token, url}){
         .then(response=> response.json())
 }
 
-module.exports = {getData}
+function getData(url){
+    return fetch(url)
+        .then(response=> response.json())
+}
+
+
+module.exports = {getDataWithToken, getData}

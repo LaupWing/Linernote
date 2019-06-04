@@ -82,12 +82,17 @@ function renderSearchResult(results){
     })
 }
 
-function renderDetails({details, related}){
+function renderDetails({details, related, events}){
+    console.log(events)
     const container = document.querySelector('#container')
     clearContainer(container)
     const header = `
-        <header>
-            <img src="${details.images[0].url}">
+        <header 
+            style="
+                background:url(${details.images[0].url});
+                background-repeat: no-repeat;
+                background-size: cover;"
+        >
             <div class="info">
                 <div class="info-name">
                     <h2>${details.name}</h2>
@@ -106,16 +111,18 @@ function renderDetails({details, related}){
     related.artists.forEach(artist=>{
         const newEl = `
             <div data-id="${artist.id}" class="artists">
-                <img src="${artist.images[0].url}">
+                <div class="image-container">
+                    <img src="${artist.images[0].url}">
+                </div>
                 <h4>${artist.name}</h4>
             </div>
         `
         related_container.insertAdjacentHTML('beforeend', newEl)
     })
+    document.querySelectorAll('#related_artists .artists').forEach(artist=>artist.addEventListener('click', showDetail))
 }
 
 function showDetail(){
     const id = this.getAttribute('data-id')
-    console.log(id)
     socket.emit('get details', id)
 }
